@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-3' : 'bg-transparent py-6'}`}>
       <div className="container flex justify-between items-center">
         <div className="text-2xl font-black tracking-tighter text-white">
-          BURGER<span className="text-orange">LAB</span>
+          SIOLLY<span className="text-orange">BURGER</span>
         </div>
         <div className="hidden md:flex space-x-8 font-semibold uppercase text-sm tracking-widest hidden-mobile">
           <a href="#hero" className="hover:text-orange">Home</a>
@@ -224,7 +224,7 @@ const About = () => (
       >
         <h2 className="text-5xl font-black text-orange">Nossa História</h2>
         <p className="text-xl text-zinc-600 leading-relaxed">
-          Nascemos da paixão pelo fogo e pela carne de qualidade. Cada hambúrguer no BURGER LAB é uma obra de arte, combinando ingredientes selecionados e técnicas artesanais.
+          Nascemos da paixão pelo fogo e pela carne de qualidade. Cada hambúrguer no SIOLLY BURGER é uma obra de arte, combinando ingredientes selecionados e técnicas artesanais.
         </p>
         <p className="text-lg text-zinc-500">
           Não entregamos apenas comida, entregamos uma experiência sensorial única que começa no aroma e termina na explosão de sabores da primeira mordida.
@@ -520,7 +520,7 @@ const Footer = () => {
       <div className="container grid md:grid-cols-4 gap-12 mb-20 text-center md:text-left">
         <div className="space-y-6">
           <div className="text-3xl font-black text-white">
-            BURGER<span className="text-orange">LAB</span>
+            SIOLLY<span className="text-orange">BURGER</span>
           </div>
           <p className="text-sm leading-relaxed">
             Onde a ciência e a gastronomia se encontram para criar o blend perfeito.
@@ -563,7 +563,7 @@ const Footer = () => {
       </div>
 
       <div className="container border-t border-white/5 pt-10 text-center text-xs opacity-50">
-        &copy; 2024 BURGER LAB. Todos os direitos reservados.
+        &copy; 2024 SIOLLY BURGER. Todos os direitos reservados.
       </div>
 
       {/* WhatsApp Floating Button */}
