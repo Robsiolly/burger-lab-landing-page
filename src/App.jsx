@@ -442,14 +442,14 @@ const Testimonials = () => {
     {
       name: "Ricardo Silva",
       text: "O melhor hambúrguer que já comi em anos.",
-      source: "Google Review",
-      color: "#FF6B00"
+      source: "iFood",
+      color: "#EA1D2C"
     },
     {
       name: "Julia Mendes",
       text: "O Double Cheese Blast é uma loucura! O queijo derretido se mistura perfeitamente com a carne suculenta. Sensacional!",
-      source: "TripAdvisor",
-      color: "#25D366"
+      source: "iFood",
+      color: "#EA1D2C"
     },
     {
       name: "Marcos Paulo",
