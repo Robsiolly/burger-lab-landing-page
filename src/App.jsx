@@ -441,7 +441,7 @@ const Testimonials = () => {
   const reviews = [
     {
       name: "Ricardo Silva",
-      text: "O melhor hamburger que já comi em anos. A explosão de sabores é real, não é apenas marketing!",
+      text: "O melhor hambúrguer que já comi em anos.",
       source: "Google Review",
       color: "#FF6B00"
     },
