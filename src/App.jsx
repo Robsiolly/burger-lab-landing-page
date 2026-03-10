@@ -441,7 +441,7 @@ const Testimonials = () => {
   const reviews = [
     {
       name: "Ricardo Silva",
-      text: "Melhor hambúrguer que já comi em anos. A explosão de sabores é real, não é apenas marketing!",
+      text: "Melhor hambúrguer que já vi em anos. A explosão de sabores é real, não é apenas marketing!",
       source: "Google Review",
       color: "#FF6B00"
     },
@@ -500,11 +500,11 @@ const FinalCTA = () => (
       <motion.h2
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        className="text-7xl md:text-9xl font-black italic tracking-tighter text-white"
+        className="text-7xl md:text-9xl font-black italic tracking-tighter text-white pb-12 leading-[0.9]"
       >
         PRONTO PARA <br /> <span className="text-orange">EXPERIMENTAR?</span>
       </motion.h2>
-      <a href="https://wa.me/5511950223123" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange text-white px-16 py-6 rounded-2xl text-2xl hover:bg-white hover:text-orange font-black uppercase transition-colors">
+      <a href="https://wa.me/5511950223123" target="_blank" rel="noopener noreferrer" className="inline-block mt-12 bg-orange text-white px-16 py-6 rounded-2xl text-2xl hover:bg-white hover:text-orange font-black uppercase transition-colors">
         Fazer Pedido
       </a>
     </div>
@@ -517,7 +517,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-zinc-950 border-t border-white/5 pt-20 pb-10 text-zinc-400">
-      <div className="container grid md:grid-cols-4 gap-12 mb-20 text-center md:text-left">
+      <div className="container grid md:grid-cols-3 gap-12 mb-20 text-center md:text-left">
         <div className="space-y-6">
           <div className="text-3xl font-black text-white">
             SIOLLY<span className="text-orange">BURGER</span>
@@ -549,15 +549,6 @@ const Footer = () => {
           <ul className="space-y-4 text-sm">
             <li className="flex items-center justify-center md:justify-start gap-3"><Clock size={16} className="text-orange" /> Seg - Sex: 18h às 23h</li>
             <li className="flex items-center justify-center md:justify-start gap-3"><Clock size={16} className="text-orange" /> Sáb - Dom: 17h às 00h</li>
-          </ul>
-        </div>
-
-        <div className="space-y-6">
-          <h4 className="text-white font-bold uppercase tracking-widest text-sm">Links Rápidos</h4>
-          <ul className="space-y-4 text-sm uppercase font-bold tracking-tighter">
-            <li><a href="#" className="hover:text-orange">Trabalhe conosco</a></li>
-            <li><a href="#" className="hover:text-orange">Franquias</a></li>
-            <li><a href="#" className="hover:text-orange">Privacidade</a></li>
           </ul>
         </div>
       </div>
