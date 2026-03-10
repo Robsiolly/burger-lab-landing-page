@@ -496,17 +496,19 @@ const Testimonials = () => {
 const FinalCTA = () => (
   <section className="relative overflow-hidden py-32 bg-black">
     <div className="absolute inset-0 bg-orange/10" />
-    <div className="container relative z-10 text-center space-y-10">
+    <div className="container relative z-10 text-center space-y-16">
       <motion.h2
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        className="text-7xl md:text-9xl font-black italic tracking-tighter text-white pb-12 leading-[0.9]"
+        className="text-7xl md:text-9xl font-black italic tracking-tighter text-white leading-none"
       >
         PRONTO PARA <br /> <span className="text-orange">EXPERIMENTAR?</span>
       </motion.h2>
-      <a href="https://wa.me/5511950223123" target="_blank" rel="noopener noreferrer" className="inline-block mt-12 bg-orange text-white px-16 py-6 rounded-2xl text-2xl hover:bg-white hover:text-orange font-black uppercase transition-colors">
-        Fazer Pedido
-      </a>
+      <div className="pt-8">
+        <a href="https://wa.me/5511950223123" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange text-white px-16 py-6 rounded-2xl text-2xl hover:bg-white hover:text-orange font-black uppercase transition-colors">
+          Fazer Pedido
+        </a>
+      </div>
     </div>
   </section>
 );
