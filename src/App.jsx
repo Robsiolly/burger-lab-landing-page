@@ -525,7 +525,7 @@ const FinalCTA = () => (
       <motion.h2
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        className="text-7xl md:text-9xl font-black italic tracking-tighter text-white leading-none"
+        className="text-5xl md:text-9xl font-black italic tracking-tighter text-white leading-none"
       >
         PRONTO PARA <br /> <span className="text-orange">EXPERIMENTAR?</span>
       </motion.h2>
