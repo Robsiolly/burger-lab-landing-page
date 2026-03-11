@@ -186,6 +186,14 @@ section {
   .md\:text-left {
     text-align: left;
   }
+
+  .md\:hidden {
+    display: none !important;
+  }
+
+  .md\:flex {
+    display: flex !important;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -616,12 +624,28 @@ section {
 }
 
 /* Responsive Fixes */
+.hidden {
+  display: none !important;
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 1.5rem;
   }
 
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .text-5xl {
+    font-size: 2.25rem;
+  }
+
   .text-6xl {
+    font-size: 2.5rem;
+  }
+
+  .text-7xl {
     font-size: 3rem;
   }
 
@@ -657,12 +681,9 @@ section {
     display: none !important;
   }
 
-  nav .hidden.md\:flex {
-    display: none !important;
-  }
-
   #cardapio .grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .md\:grid-cols-4 {

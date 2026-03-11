@@ -6,6 +6,7 @@ import { ShoppingCart, Menu as MenuIcon, Check, Star, MapPin, Clock, Phone, Inst
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -14,22 +15,46 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-black/95 backdrop-blur-md py-3' : 'bg-transparent py-6'}`}>
       <div className="container flex justify-between items-center">
-        <div className="text-2xl font-black tracking-tighter text-white">
+        <div className="text-2xl font-black tracking-tighter text-white z-50">
           SIOLLY<span className="text-orange">BURGER</span>
         </div>
-        <div className="hidden md:flex space-x-8 font-semibold uppercase text-sm tracking-widest hidden-mobile">
+        <div className="hidden md:flex space-x-8 font-semibold uppercase text-sm tracking-widest">
           <a href="#hero" className="hover:text-orange">Home</a>
           <a href="#sobre" className="hover:text-orange">Sobre</a>
           <a href="#cardapio" className="hover:text-orange">Cardápio</a>
           <a href="#depoimentos" className="hover:text-orange">Depoimentos</a>
         </div>
-        <a href="https://wa.me/5511950223123" target="_blank" rel="noopener noreferrer" className="bg-orange text-white px-6 py-2 rounded-full font-bold text-sm uppercase tracking-tighter hover:scale-105 transition-transform flex items-center gap-2">
-          <ShoppingCart size={18} />
-          Peça Agora
-        </a>
+        <div className="flex items-center gap-4 z-50">
+          <a href="https://wa.me/5511950223123" target="_blank" rel="noopener noreferrer" className="bg-orange text-white px-6 py-2 rounded-full font-bold text-sm uppercase tracking-tighter hover:scale-105 transition-transform hidden md:flex items-center gap-2">
+            <ShoppingCart size={18} />
+            Peça Agora
+          </a>
+          <button className="md:hidden text-white hover:text-orange transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <MenuIcon size={28} />
+          </button>
+        </div>
       </div>
+
+      {isMobileMenuOpen && (
+        <motion.div 
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
+        >
+          <div className="container py-8 flex flex-col gap-6 items-center text-center">
+            <a href="#hero" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-orange font-bold uppercase tracking-widest text-lg w-full">Home</a>
+            <a href="#sobre" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-orange font-bold uppercase tracking-widest text-lg w-full">Sobre</a>
+            <a href="#cardapio" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-orange font-bold uppercase tracking-widest text-lg w-full">Cardápio</a>
+            <a href="#depoimentos" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-orange font-bold uppercase tracking-widest text-lg w-full">Depoimentos</a>
+            <a href="https://wa.me/5511950223123" target="_blank" rel="noopener noreferrer" className="bg-orange text-white px-8 py-4 rounded-full font-black uppercase tracking-tighter w-full max-w-xs text-center flex justify-center items-center gap-2 mt-4 text-sm">
+              <ShoppingCart size={20} />
+              Pedir Agora
+            </a>
+          </div>
+        </motion.div>
+      )}
     </nav>
   );
 };
