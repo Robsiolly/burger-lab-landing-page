@@ -549,8 +549,8 @@ const Footer = () => {
         <div className="space-y-6">
           <h4 className="text-white font-bold uppercase tracking-widest text-sm">Horário</h4>
           <ul className="space-y-4 text-sm">
-            <li className="flex items-center justify-center md:justify-start gap-3"><Clock size={16} className="text-orange" /> Seg - Sex: 18h às 23h</li>
-            <li className="flex items-center justify-center md:justify-start gap-3"><Clock size={16} className="text-orange" /> Sáb - Dom: 17h às 00h</li>
+            <li className="flex items-center justify-center md:justify-start gap-3"><Clock size={16} className="text-orange" /> Segunda a Sexta: 18h às 23h</li>
+            <li className="flex items-center justify-center md:justify-start gap-3"><Clock size={16} className="text-orange" /> Sábado a Domingo: 17h às 00h</li>
           </ul>
         </div>
       </div>
